@@ -1,0 +1,210 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Agro Tohum ve Tarım Kategorisi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Agro Seed Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+<!-- font -->
+<link href="//fonts.googleapis.com/css?family=Laila:300,400,500,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+<!-- //font -->
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner">
+		<div class="head">
+			<div class="container">
+					<div class="navbar-top">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+							  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							  </button>
+								 <div class="navbar-brand logo ">
+									<h1 class="animated wow pulse" data-wow-delay=".5s">
+									<a href="/home/">Agro<span>tohum</span></a></h1>
+								</div>
+
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav link-effect-4">
+ 							<li><a href="/home/" data-hover="Home">Ana Sayfa</a> </li>
+ 								<li><a href="/gallery/"  data-hover="Gallery">Galeri</a></li>
+ 								<li class="active"><a href="/contact/" data-hover="Contact">İletişim</a></li>
+ 							  </ul>
+							</div><!-- /.navbar-collapse -->
+						</div>
+					  <div class="clearfix"></div>
+			</div>
+		</div>
+		<!-- banner-slider -->
+		<div class="jarallax about-banner">
+			<div class="container">
+				<div class="agileits-heading about-heading">
+					<h2>İLETİŞİM</h2>
+				</div>
+			</div>
+		</div>
+		<!-- //banner-slider -->
+	</div>
+	<!-- //banner -->
+	<!-- contact -->
+	<div class="contact">
+		<div class="container">
+			<div class="map-grid">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96722.75368142183!2d30.312081815572267!3d40.74913322747243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ccb2fad58e639f%3A0xb84f12f8c14f1221!2sSakarya!5e0!3m2!1str!2str!4v1596795861297!5m2!1str!2str" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			<div class="address">
+				<div class="col-sm-4 address-grids">
+					<h4>Adres :</h4>
+					<p>Türkiye<br>
+						<span>Sakarya,</span>
+						Serdivan
+					</p>
+				</div>
+				<div class="col-sm-4 address-grids">
+					<h4>Telefon :</h4>
+					<p>+90 123 456 789</p>
+					<p>+90 987 654 321</p>
+				</div>
+				<div class="col-sm-4 address-grids">
+					<h4>Eposta :</h4>
+					<p><a href="#">mail@tohum.com</a></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="contact-form">
+				<h4>İletişim Formu</h4>
+				<div class="contact-form-grid">
+					<form method="POST" id="contactForm">
+			      {% csrf_token %}
+						<div class="fields-grid">
+							<div class="styled-input agile-styled-input-top">
+								<input type="text" name="adsoyad" required="">
+								<label>Ad Soyad</label>
+								<span></span>
+							</div>
+							<div class="styled-input agile-styled-input-top">
+								<input type="text" name="telefon" required="">
+								<label>Telefon</label>
+								<span></span>
+							</div>
+							<div class="styled-input">
+								<input type="text" name="eposta" required="">
+								<label>Eposta</label>
+								<span></span>
+							</div>
+							<div class="styled-input">
+								<input type="text" name="konu" required="">
+								<label>Konu</label>
+								<span></span>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="styled-input textarea-grid">
+							<textarea name="mesaj" required=""></textarea>
+							<label>Mesaj</label>
+							<span></span>
+						</div>
+						<input type="submit" value="GÖNDER">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //contact -->
+	<!-- footer -->
+	<div class="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="footer-grids">
+					<div class="col-md-3 footer-grid">
+						<div class="footer-logo">
+							<h4><a href="index.html">Agro<span>tohum</span></a></h4>
+							<p>Agro Tohum ve Tarım Kategorisi.</p>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-3 footer-list">
+					</div>
+					<div class="col-md-3 footer-grid">
+						<h3>Sayfalar</h3>
+						<ul>
+							<li> <a href="/home/">Ana Sayfa</a> </li>
+							<li> <a href="/gallery/">Galeri</a> </li>
+							<li> <a href="/contact/">İletişim</a> </li>
+						</ul>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-3 agile-footer-grid">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<p>© 2020 Agro Tohum. Tüm hakları saklıdır | Django <3</a></p>
+		</div>
+	</div>
+	<!-- //copyright -->
+	<script src="{% static 'js/jarallax.js' %}"></script>
+	<script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+
+</body>
+</html>
